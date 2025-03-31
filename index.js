@@ -145,6 +145,7 @@ const htmlTemplate = `
       margin-bottom: 20px;
       font-size: 2.5em;
       font-weight: 600;
+	  text-align: center;
       opacity: 0;
       animation: fadeIn 1s ease-in-out forwards;
     }
@@ -157,7 +158,7 @@ const htmlTemplate = `
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       padding: 40px;
       width: 80%;
-      max-width: 500px;
+      max-width: 960px;
       transition: background-color 0.5s ease;
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
     }
@@ -168,7 +169,7 @@ const htmlTemplate = `
     }
     textarea {
       width: calc(100% - 30px);
-      height: 250px;
+      height: 500px;
       margin-bottom: 20px;
       padding: 15px;
       border: none;
@@ -228,14 +229,16 @@ const htmlTemplate = `
     /* 媒体查询：针对小屏幕设备 (例如手机) */
     @media (max-width: 768px) {
       .container {
+      width: 85%;
         padding: 20px;
       }
       textarea {
-        height: 200px;
+	  
+        height: 300px;
         font-size: 16px;
       }
       button {
-        padding: 12px 25px;
+        padding: 12px 20px;
         font-size: 16px;
       }
       h1 {
@@ -392,9 +395,9 @@ const htmlTemplate = `
     <h1>在线剪贴板</h1>
     <textarea id="clipboard" placeholder="在此处粘贴内容..."></textarea>
     <div class="button-group">
-      <button id="saveBtn"><i class="fas fa-cloud-upload-alt"></i>保存到云端</button>
-      <button id="readBtn"><i class="fas fa-cloud-download-alt"></i>从云端读取</button>
-      <button id="copyBtn"><i class="fas fa-copy"></i>复制到本地</button>
+      <button id="saveBtn"><i class="fas fa-cloud-upload-alt"></i>保存</button>
+      <button id="readBtn"><i class="fas fa-cloud-download-alt"></i>读取</button>
+      <button id="copyBtn"><i class="fas fa-copy"></i>复制</button>
       <button id="shareBtn"><i class="fas fa-share-alt"></i>分享</button>
     </div>
   </div>
